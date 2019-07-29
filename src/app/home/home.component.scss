@@ -1,0 +1,165 @@
+.user {
+  background: #409788;
+  padding: 24px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 18px;
+  }
+
+  &__edu {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &__img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    border: 1px solid #fff;
+    background: url("../../assets/images/img.jpeg") no-repeat #000;
+    background-size: cover;
+  }
+}
+
+.search {
+  padding: 18px 0 0;
+
+  &__box {
+    border-radius: 6px;
+    height: 50px;
+    width: 100%;
+    border: none;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background: url("../../assets/images/icons/search.svg") #fff;
+    background-repeat: no-repeat;
+    background-position: 96%;
+    background-size: 20px;
+  }
+}
+
+
+// near jobs section
+.near-jobs {
+  background: #fff;
+  margin-top: 8px;
+  padding: 18px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    width: 45px;
+    height: 35px;
+    margin-right: 18px;
+  }
+
+  &__desc {
+    width: 100%;
+  }
+
+  &--near-you {
+    background: url("../../assets/images/icons/JobsNearYou.svg") no-repeat;
+  }
+
+  &--for-you {
+    background: url("../../assets/images/icons/JobsForYou.svg") no-repeat;
+  }
+
+  &--by-cities {
+    background: url("../../assets/images/icons/JobsbyLocation.svg") no-repeat;
+  }
+
+  &__heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  &__address {
+    line-height: 18px;
+  }
+
+  &__exact-loc {
+    font-size: 18px;
+    font-weight: 600;
+    color: #409788;
+  }
+}
+
+// job-carausal
+.job-carausal {
+  padding: 24px;
+  background: #fff;
+}
+
+// category jobs
+.category-jobs {
+  padding: 6px 22px 22px 22px;
+  background: #fac465;
+
+  &__heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 30px 0 20px;
+  }
+}
+
+.carausal {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+// whatsapp container
+.whats-app-container {
+  background: #fff;
+
+  .whats-app-card {
+    border: 1px solid #222;
+    box-shadow: -1px 0px 0px 2px #c6cacc;
+    padding: 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__heading {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 32px;
+    }
+
+    &__txt {
+      margin: 12px 0;
+      font-weight: 500;
+      color: rgb(95, 93, 93);
+    }
+
+    &__btn {
+      border-radius: 30px;
+      font-size: 18px;
+      text-transform: uppercase;
+      padding: 12px;
+      font-weight: 600;
+      background: #409788;
+    }
+  }
+}

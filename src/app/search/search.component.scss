@@ -1,0 +1,16 @@
+.search {
+  padding: 18px 0 0;
+
+  &__box {
+    border-radius: 6px;
+    height: 50px;
+    width: 100%;
+    border: none;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background: url("../../assets/images/icons/search.svg") #fff;
+    background-repeat: no-repeat;
+    background-position: 96%;
+    background-size: 20px;
+  }
+}

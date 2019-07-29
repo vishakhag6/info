@@ -1,0 +1,8 @@
+<div class="search">
+  <div class="search__container">
+    <form [formGroup]="searchForm">
+      <input class="search__box" formControlName="search" type="search" placeholder="Search Jobs" id="" [(ngModel)]="search" (keyup)="searchPlace()">
+      {{search}}
+    </form>
+  </div>
+</div>

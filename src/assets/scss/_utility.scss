@@ -1,0 +1,39 @@
+body,
+html {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  background: #f1f1f1;
+  font-family: "Open Sans", sans-serif;
+}
+
+// utility
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+label {
+  font-size: 13px;
+}
+
+.padding-18 {
+  padding: 18px;
+}

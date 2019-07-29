@@ -1,0 +1,137 @@
+<router-outlet></router-outlet>
+
+<!-- user seaction -->
+<div class="user">
+  <div class="user__container">
+    <div class="user__info">
+      <p class="user__name">Ram Singh</p>
+      <p class="user__edu">12th Pass | Fresher</p>
+    </div>
+    <div class="user__img">
+    </div>
+  </div>
+
+  <!-- search seaction -->
+  <div class="search">
+    <div class="search__container">
+      <form [formGroup]="searchForm">
+        <input class="search__box" autofocus formControlName="search" type="search" placeholder="Search Jobs" id="" [(ngModel)]="search"
+          (keyup.enter)="searchPlace()">
+        {{search}}
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- jobs near you section -->
+<div class="near-jobs">
+  <div class="near-jobs__container">
+    <div class="near-jobs__icon near-jobs--near-you"> </div>
+    <div class="near-jobs__desc">
+      <p class="near-jobs__heading">Jobs near you</p>
+      <p class="near-jobs__address">In and around <small class="near-jobs__exact-loc">New York</small></p>
+    </div>
+    <button class="btn btn--txt">View</button>
+  </div>
+</div>
+
+<!-- job card -->
+<div *ngIf="showLoader else loaded">
+  <ng4-loading-spinner> </ng4-loading-spinner>
+</div>
+
+<ng-template #loaded>
+  <div class="job-carausal carausal">
+    <a href="{{item.value.url}}" class="card" *ngFor="let item of jobObj | keyvalue">
+      <div class="card__header">
+        <p class="card__heading">{{item.value.title}}</p>
+        <p class="card__img">
+          <img src="{{item.value.company_logo}}" alt="" width="100">
+        </p>
+      </div>
+
+      <div class="card__company">
+        {{item.value.company}}
+      </div>
+      <div class="card__content">
+        <p><i> <img src="../assets/images/icons/JobsNearYou.svg" alt=""> </i>{{item.value.location}}</p>
+        <p><i> <img src="../assets/images/icons/JobsNearYou.svg" alt=""> </i>{{item.value.type}}</p>
+      </div>
+      <div class="card__footer">
+        Posted {{item.value.created_at  | date:'fullDate'}}
+      </div>
+    </a>
+  </div>
+</ng-template>
+
+<!-- jobs by category -->
+<div class="category-jobs">
+  <p class="category-jobs__heading">Jobs by Categories</p>
+  <div class="carausal" style="padding: 6px;">
+    <div class="card card--small" *ngFor="let item of allObj | keyvalue" (click)="jobsByCategoryFunc(item.value.title)">
+      <div class="card__header">
+        <p class="card__heading" style="margin-bottom: 0;">{{item.value.title}}</p>
+      </div>
+      <!-- <div class="card__content">
+        <p>261 Jobs</p>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+
+<!-- Jobs for you section-->
+<div class="near-jobs">
+  <div class="near-jobs__container">
+    <div class="near-jobs__icon near-jobs--for-you"> </div>
+    <div class="near-jobs__desc">
+      <p class="near-jobs__heading">Jobs for you</p>
+      <p class="near-jobs__address">Based on your <small class="near-jobs__exact-loc">PREFERENCES</small></p>
+    </div>
+    <button class="btn btn--txt">View</button>
+  </div>
+  <div class="badge">
+    python
+  </div>
+</div>
+
+<!-- job card -->
+<div class="job-carausal carausal">
+  <a href="{{item.value.url}}" class="card" *ngFor="let item of allJobsPreferenceObj | keyvalue">
+    <div class="card__header">
+      <p class="card__heading">{{item.value.title}}</p>
+      <p class="card__img">
+        <img src="{{item.value.company_logo}}" alt="" width="100">
+      </p>
+    </div>
+
+    <div class="card__company">
+      {{item.value.company}}
+    </div>
+    <div class="card__content">
+      <p><i> <img src="../assets/images/icons/JobsNearYou.svg" alt=""> </i>{{item.value.location}}</p>
+      <p><i> <img src="../assets/images/icons/JobsNearYou.svg" alt=""> </i>{{item.value.type}}</p>
+    </div>
+    <div class="card__footer">
+      Posted {{item.value.created_at  | date:'fullDate'}}
+    </div>
+  </a>
+</div>
+
+<!-- whats app card -->
+<div class="whats-app-container">
+  <div class="padding-18">
+    <div class="whats-app-card">
+      <div style="width: 70%;">
+        <p class="whats-app-card__heading">Get alerts on Whatsapp</p>
+        <p class="whats-app-card__txt">For similar jobs</p>
+        <button class="whats-app-card__btn btn">Enable Now</button>
+      </div>
+      <div>
+        <img src="../assets/images/category-images/back_office.png" alt="" width="70">
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
