@@ -1,5 +1,5 @@
 .user {
-  background: #409788;
+  background: #009788;
   padding: 24px;
 
   &__container {
@@ -10,9 +10,8 @@
 
   &__name {
     font-size: 22px;
-    font-weight: 600;
     color: #fff;
-    margin-bottom: 18px;
+    margin: 10px 0;
   }
 
   &__edu {
@@ -36,7 +35,8 @@
 
   &__box {
     border-radius: 6px;
-    height: 50px;
+    height: 48px;
+    line-height: 48px;
     width: 100%;
     border: none;
     padding: 0 20px;
@@ -45,6 +45,21 @@
     background-repeat: no-repeat;
     background-position: 96%;
     background-size: 20px;
+    color: #263636;
+    box-shadow: -1px 0px 0px 2px #008c83;
+  }
+
+  ::placeholder {
+    color: #aeb8b9;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #aeb8b9;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: #aeb8b9;
   }
 }
 
@@ -85,19 +100,18 @@
 
   &__heading {
     font-size: 20px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 10px;
+    color: #263636;
+    margin-bottom: 7px;
   }
 
   &__address {
     line-height: 18px;
+    color: #527579;
   }
 
   &__exact-loc {
     font-size: 18px;
-    font-weight: 600;
-    color: #409788;
+    color: #009788;
   }
 }
 
@@ -114,8 +128,7 @@
 
   &__heading {
     font-size: 20px;
-    font-weight: 600;
-    color: #333;
+    color: #25383c;
     margin: 30px 0 20px;
   }
 }
@@ -131,10 +144,11 @@
 // whatsapp container
 .whats-app-container {
   background: #fff;
+  padding-bottom: 20px;
 
   .whats-app-card {
     border: 1px solid #222;
-    box-shadow: -1px 0px 0px 2px #c6cacc;
+    box-shadow: -1px 0px 0px 2px #ebf5f6;
     padding: 20px;
     border-radius: 6px;
     display: flex;
@@ -143,12 +157,13 @@
 
     &__heading {
       font-size: 22px;
-      font-weight: 600;
       line-height: 32px;
+      color: #283c3b
     }
 
     &__txt {
       margin: 12px 0;
+      font-size: 18px;
       font-weight: 500;
       color: rgb(95, 93, 93);
     }
@@ -158,7 +173,6 @@
       font-size: 18px;
       text-transform: uppercase;
       padding: 12px;
-      font-weight: 600;
       background: #409788;
     }
   }

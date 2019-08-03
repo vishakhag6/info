@@ -1,6 +1,6 @@
 .card {
   background: #fff;
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
   border-radius: 6px;
   box-shadow: -1px 0px 0px 2px #ebf0f3;
   width: 100%;
@@ -15,9 +15,14 @@
   }
 
   &--small {
+    padding: 20px;
     width: auto;
     min-width: 120px;
-    box-shadow: -4px 0px 0px 2px #dbbc86;
+    box-shadow: -4px 0px 0px 2px #eab85f;
+
+    .card__heading {
+      min-height: initial;
+    }
 
     .card__content {
       margin: 6px 0 4px 0;
@@ -32,31 +37,47 @@
 
   &__heading {
     font-size: 18px;
-    font-weight: 600;
-    color: #333;
+    color: #283c3b;
     margin-bottom: 10px;
     line-height: 26px;
+    max-height: 53px;
+    min-height: 53px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
   }
 
   &__company {
-    color: #7e979d;
-    font-weight: 600;
+    color: #527579;
   }
 
   &__img {
     min-width: 60px;
     width: 60px;
-    height: 60px;
+    margin-bottom: 10px;
     border-radius: 7px;
-    // background: #000;
     overflow: hidden;
+
+    img {
+      max-width: 100%;
+      margin-right: 10px;
+    }
   }
 
   &__content {
-    margin: 22px 0 4px 0; 
+    margin: 22px 0 4px 0;
 
     p {
       color: #7e979d;
+      font-size: 18px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      img {
+        margin-right: 10px;
+      }
     }
   }
 

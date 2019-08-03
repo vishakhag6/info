@@ -2,7 +2,18 @@
   width: auto;
   display: inline-block;
   border: 2px solid #ebf0f3;
-  padding: 18px;
+  padding: 12px 18px;
   border-radius: 30px;
   margin: 22px 12px 0 0;
+}
+
+.spinner {
+  .lds-roller {
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%)
+  }
+}
+#loading-spinner-text {
+  padding: 0 !important;
 }
